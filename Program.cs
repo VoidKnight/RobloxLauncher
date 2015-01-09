@@ -6,6 +6,9 @@ namespace robloxlauncher
 {
     class Program
     {
+        // Put your place Id here:
+        public static int placeId = 174687387;
+        
         public static string getROBLOXDirectory()
         {
             string appName = "RobloxPlayerBeta.exe";
@@ -26,15 +29,15 @@ namespace robloxlauncher
 
         static void Main(string[] args)
         {
-            Console.WriteLine("ROBLOX Place Launcher v1.0");
-            Console.WriteLine("Made by AetherKnight");
+            Console.WriteLine("ROBLOX Place Launcher v1.1");
+            Console.WriteLine("Made by Vorlias");
 
             string RBXPlayerLocation = getROBLOXDirectory();
 
             if (RBXPlayerLocation != null)
             {
                 Console.WriteLine("ROBLOX Found! " + RBXPlayerLocation);
-                Process p = Process.Start(RBXPlayerLocation + @"\ROBLOXPlayerBeta.exe", "--id 101449733"); // the Id of the place goes after the '--id' part.
+                Process p = Process.Start(RBXPlayerLocation + @"\ROBLOXPlayerBeta.exe", "--id " + placeId.ToString()); // the Id of the place goes after the '--id' part.
             }
             else
             {
@@ -45,3 +48,4 @@ namespace robloxlauncher
         }
     }
 }
+
